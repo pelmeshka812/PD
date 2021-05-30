@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Payday</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <meta content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body class="log">
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <div>
+                <!-- Nav tabs -->
+                <div class="form-reg">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-form" >
+                        <li role="presentation"  style="text-align: center;"><a href="login.html" aria-controls="home" >Вход</a></li>
+                        <li role="presentation" class="active" style="text-align: center;"><a href="signUp.html" aria-controls="home" >Регистрация</a></li>
+                    </ul>
+                </div>
+                <!-- Tab panes -->
+                    <div id="signUp">
+                        <form class="form-horizontal" method="post" action="auth/signup.php">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" id="exampleInputEmail1" class="form-control" name="email" required>
+                                <span style='color: red'><strong></strong></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Имя</label>
+                                <input type="text" class="form-control" id="exampleInputNickName" name="nickname">
+                                <span style='color: red'><strong></strong></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Пароль</label>
+                                <input minlength="1" type="password" class="form-control" id="exampleInputPassword1" name="password">
+                                <span style='color: red'><strong></strong></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Повторите пароль</label>
+                                <input minlength="8" type="password" class="form-control" id="exampleInputPasswordConfirm" name="password2">
+                            </div>
+                            <div class="form-group">
+                                <button minlength="8" type="submit" class="btn btn-default" name="submit">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

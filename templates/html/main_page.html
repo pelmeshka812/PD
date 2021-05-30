@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Pay Day</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/owl.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- -->
+<div id="section00" class="panel">
+
+    <img id="logo" src="../images/logo.png" alt="PayDay">
+
+
+
+    <div id="section-next">
+        <a href="#section1">
+            <button type="button" href="#section2" class="btn btn-secondary btn-lg next-btn">Next</button>
+        </a>
+    </div>
+</div>
+
+<div id="section01">
+    <!-- -->
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#section00">PayDay</a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#section1">Мероприятие</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#section2">Участники</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#section3">Товары</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#section4">Кто и что</a>-->
+<!--            </li>-->
+            <li class="nav-item ">
+                <a class="nav-link" href="../login.html">Вход</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../signUp.html">Регистрация</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- -->
+    <div id="section1" class="panel container-fluid">
+        <form id="form_creating_event">
+            <div class="centered">
+                <div class="visible">
+                    <h1>Введите название мероприятия</h1><br/>
+                    <div class="form-group">
+
+                        <label for="usr"><h3>Название</h3></label>
+                        <input type="text" class="form-control" id="usr">
+
+                    </div>
+                    <br/>
+                    <h3>Дата</h3>
+                    <input type="date" name="date" id="date">
+                    <br/>
+                </div>
+            </div>
+            <div class="next-btn" id="nd_next">
+                <a href="#section2">
+                    <button type="submit" class="btn btn-secondary btn-lg">Далее</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- -->
+    <div id="section2" class="panel container-fluid">
+        <div class="centered">
+            <div class="visible">
+                <h1>Участники</h1><br/>
+                <div>
+                    <form id="form_adding_user" name="adding_users">
+                        <label for="usr"><h4>Имя</h4></label>
+                        <input type="text" class="form-control" id="name">
+                        <label for="usr"><h4>Фамилия</h4></label>
+                        <input type="text" class="form-control" id="surname"><br/>
+                        <a>
+                            <button type="submit" class="btn btn-secondary">Добавить</button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="next-btn">
+            <a href="#section3">
+                <button type="button" class="btn btn-secondary btn-lg">Далее</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- -->
+    <div id="section3" class="panel container-fluid">
+        <div class="centered">
+            <div class="visible">
+                <h1>Предметы</h1>
+                <div>
+                    <form id="form_adding_product" name="adding_product">
+                        <label for="usr"><h4>Название товара</h4></label>
+                        <input type="text" class="form-control" id="name_of_product"><br/>
+
+                        <div class="dropdown" id="who_bought_product">
+                            <select id="section3_users" class="custom-select custom-select-lg mb-3">
+                                <option selected>Кто купил?</option>
+                            </select>
+                            <!--<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                Who have bought?
+                            </button>
+                            {#                            <input type="name" id=""#}
+
+                            <div class="dropdown-menu select-name" id="user_selector">
+                                <p class="dropdown-item">Я</p>
+                                <p class="dropdown-item">Не знаю</p>
+                                <p class="dropdown-item">Кого</p>
+                                <p class="dropdown-item">Сюда</p>
+                                <p class="dropdown-item">Добавить</p>
+                            </div>-->
+                        </div>
+                        <br/><br/><br/>
+                        <div class="block_price_and_quantity">
+                            <div class="price">
+                                <label for="usr"><h4>Цена</h4></label>
+                                <p><input type="number" id="price_of_product" name="price" size="" min="1"
+                                          value=""><br/>
+                                </p>
+                            </div>
+                            <div class="quantity">
+                                <label for="usr"><h4>Количество</h4></label>
+                                <p><input type="number" id="quantity_of_product" name="quantity" size="" min="1"
+                                          value="1"><br/>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <a>
+                            <button type="submit" class="btn btn-secondary">Добавить</button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="next-btn" id="products-next-btn">
+            <a href="#section4">
+                <button type="button" class="btn btn-secondary btn-lg">Далее</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- -->
+    <div id="section4" class="panel container-fluid">
+        <div class="centered">
+            <div class="visible" id="ww">
+                <h1>Кто и что</h1>
+                <div style="display: flex">
+                    <form id="form_adding_members">
+                        <div class="dropdown">
+                            <!--<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                Select one...
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">First choice</a>
+                                <a class="dropdown-item" href="#">Second choice</a>
+                                <a class="dropdown-item" href="#">Third choice</a>
+                            </div>-->
+                            <select id="section4_users" class="custom-select custom-select-lg mb-3 select-user">
+                                <option selected>Выберите..</option>
+                            </select>
+                            <br/><br/><br/>
+                            <!--<button id="show_users_list" type="button" class="btn btn-secondary">
+                                Show list
+                            </button>-->
+                            <button type="submit" class="btn btn-secondary">
+                                Добавить в список
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <select id="section4_products" class="custom-select custom-select-lg mb-3 select-user">
+                                <option selected>Выберите...</option>
+                            </select>
+                            <!--<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                Select one...
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">First choice</a>
+                                <a class="dropdown-item" href="#">Second choice</a>
+                                <a class="dropdown-item" href="#">Third choice</a>
+                            </div>-->
+                            <br/><br/><br/>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-btn" id="eaters-next-btn">
+            <a href="#section5">
+                <button type="button" class="btn btn-secondary btn-lg">Далее</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- -->
+    <div id="section5" class="panel container-fluid">
+        <form id="show_results">
+            <button type="submit" class="btn btn-secondary btn-lg show-btn">Показать</button>
+            <!--<a href="#">
+            </a>-->
+        </form>
+    </div>
+</div>
+<script src="../js/mainScript.js"></script>
+
+<!--Включать scrollify тут, не удобно было тестировать, вырубил.-->
+<script src="../js/scroll.js"></script>
+<script src="../js/jquery.scrollify.js"></script>
+</body>
+</html>

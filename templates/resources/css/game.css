@@ -1,0 +1,195 @@
+#section{
+    position: relative;
+    width: 100%;
+    height: 85%;
+}
+.btn{
+    background: rgba(255, 255, 255, 0.75);
+    border: 3px #170b03;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    position:absolute;
+    top: 80%;
+    left: 42%;
+    margin: auto;
+}
+.button1{
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    height: auto;
+    margin: 5%;
+}
+#puzzle{
+    margin-top: 30px;
+    display: block;
+}
+.btn2{
+    background: rgba(255, 255, 255, 0.75);
+    /*border: 3px #170b03;*/
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    position:absolute;
+    top: 50%;
+    left: 70%;
+    margin: auto;
+}
+
+.btn3{
+    background: rgba(255, 255, 255, 0.75);
+    /*border: 3px #170b03;*/
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    position:absolute;
+    top: 70%;
+    left: 42%;
+    margin: auto;
+}
+
+.btn4{
+    background: rgba(255, 255, 255, 0.75);
+    /*border: 3px #170b03;*/
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 700%;
+    left: 70%;
+    margin: auto;
+}
+
+.krestiki_noliki{
+    width: 306px;
+    margin: 5% auto auto;
+}
+.krestiki_noliki .block{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    font-size: 100px;
+    line-height: 94px;
+}
+.restart{
+    text-align: center;
+    padding-top: 100px;
+}
+.restart a{
+    display:inline-block;
+    padding:10px 20px;
+    background-color: brown;
+    color:#fff;
+}
+
+.col-10{
+    background: url("https://klike.net/uploads/posts/2019-11/1572781281_6.jpg");
+}
+
+.wrapper {
+    margin-left: 35%;
+    width: 30%;
+    height: 600px;
+    display: table;
+}
+
+.main {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.quiz-frame {
+    border: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.quiz__head {
+    font-size: 20pt;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.head__content {
+    padding: 5px;
+}
+
+.quiz__body {
+    margin: 10px;
+}
+
+.quiz__footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 28%;
+}
+
+.footer__content {
+    padding: 5px;
+}
+
+.button {
+    border: 0;
+    border-radius: 10px;
+    background: #6477EB;
+    color: #fff;
+    padding: 10px 25px;
+    width: 70%;
+    font-size: 15pt;
+    display: block;
+    margin: 2px auto;
+    cursor: pointer;
+}
+
+.button_wrong {
+    background: #EB6465;
+}
+
+.button_correct {
+    background: #5EB97D;
+}
+
+.button_passive {
+    background: #B3B3B3;
+}
+
+.prof_text{
+    vertical-align: middle;
+}
+
+.container{
+    max-width: 720px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+canvas {
+    display: block;
+    max-height: 600px;
+}
+
+
+A:link	 	{ color: #003399; text-decoration: underline	}
+A:visited	{ color:#003399;	text-decoration: underline	}
+A:hover		{ color:#003399; text-decoration: none      }
+.copy	 {  font: 8pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333}
+.copy1	 {  font: bold 10pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+.copy2	 {  font: 9pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+h1{
+    text-align: center;
+}
+.i{
+    height: 50px;
+}
+table {
+    margin: auto;
+}

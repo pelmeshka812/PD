@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pay Day</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Pay</span> <span class="text-primary h4">Day</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">История мероприятий</a>
+                        </li>
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Work</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="pricing.html">Pricing</a>-->
+<!--                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="login.html"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <div class="container-lg py-5">
+        <div class="row" >
+            <div class="col-lg-3">
+                <div class="text-center">
+                    <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
+                            data-toggle="modal" data-target="#exampleModal">Создать мероприятие</button>
+                </div>
+             </div>
+            <div class="col-lg-3 text-center">
+                <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
+                            data-toggle="modal" data-target="#exampleModalParty">Добавить участников</button>
+            </div>
+            <div class="col-lg-3 text-center">
+                <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
+                        data-toggle="modal" data-target="#exampleModalLong">Добавить предмет</button>
+            </div>
+            <div class="col-lg-3 text-center">
+                <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
+                        data-toggle="modal" data-target="#modalWhoWhat">Кто и что использовал</button>
+            </div>
+
+            <div class="text-center py-4">
+                <form id="show_results">
+                    <button type="submit" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"> Результат</button>
+                </form>
+            </div>
+
+            <div id="section5">
+               
+            </div>
+
+        </div>
+    </div>
+{% extends 'base.html' %} &nbsp;{% block content %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle1">Добавить мероприятие</h3>
+                </div>
+                <div class="modal-body">
+                    <form id="form_creating_event">
+                        <div class="form-group">
+
+                            <label for="usr"></label>
+                            {{ form.as_p }}
+
+                        </div>
+                        <br/>
+                        <h5 class="text-center">Дата</h5>
+                        <input type="date" class="form-control form-control-lg light-300" placeholder="Название" name="date" id="date">
+                        <br/>
+                        <div class="next-btn" id="nd_next">
+                                <button type="submit" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4">Создать</button>
+                        </div>
+
+                    </form>
+                </div>
+               <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- > modal -->
+
+    <div class="modal fade" id="exampleModalParty" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle2">Добавить участника</h3>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="form_adding_user" name="adding_users">
+                            <label for="usr"></label>
+                            <input type="text" class="form-control" id="name"
+                                   class="form-control form-control-lg light-300" placeholder="Имя">
+                            <label for="usr"></label>
+                            <input type="text" class="form-control" id="surname"
+                                   class="form-control form-control-lg light-300" placeholder="Фамилия"><br/>
+<!--                            <label for="usr"></label>-->
+                            <input type="text" class="form-control" id="email"
+                                   class="form-control form-control-lg light-300" placeholder="Email"><br/>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4">Добавить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- > modal -->
+
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Добавить предмет в список</h3>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="form_adding_product" name="adding_product">
+                            <label for="usr"><h4></h4></label>
+                            <input type="text" class="form-control form-control-lg light-300" placeholder="Название" id="name_of_product"><br/>
+
+                            <div class="dropdown" id="who_bought_product">
+                                <select id="section3_users" class="form-control form-control-lg light-300">
+                                    <option selected>Кто купил?</option>
+                                </select>
+
+                            </div>
+
+<!--                            <div class="block_price_and_quantity">-->
+<!--                                <div class="price">-->
+                                    <label for="usr"></label>
+                                    <p><input type="number" class="form-control form-control-lg light-300"
+                                              placeholder="Цена" id="price_of_product" name="price" size="" min="1" value="">
+                                    </p>
+<!--                                </div>-->
+<!--                                <div class="quantity">-->
+                                    <label for="usr"></label>
+                                    <p><input type="number" class="form-control form-control-lg light-300" placeholder="Количество"
+                                              id="quantity_of_product" name="quantity" size="" min="1" value="1">
+                                    </p>
+<!--                                </div>-->
+<!--                            </div>-->
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4">Добавить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- > modal -->
+
+    <div class="modal fade" id="modalWhoWhat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle3" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle3">Кто и что</h3>
+                </div>
+                <div class="modal-body">
+                        <div style="display: flex">
+                            <form id="form_adding_members">
+                                <div class="dropdown">
+                                    <select id="section4_users" class="form-control form-control-lg light-300 mb-3" >
+                                        <option selected>Кто</option>
+                                    </select>
+                                </div>
+
+                                <div class="dropdown">
+                                    <select id="section4_products" class="form-control form-control-lg light-300 mb-3">
+                                        <option selected>Что</option>
+                                    </select>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4">
+                                    Добавить в список
+                                </button>
+                            </form>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- > modal -->
+
+<!--    <div class="modal fade" id="modalRes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle5" aria-hidden="true">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h3 class="modal-title" id="exampleModalLongTitle5">Результат</h3>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    -->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="submit" class="btn btn-secondary text-white btn-lg rounded-pill px-sm-4" data-dismiss="modal">Закрыть</button></form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- > modal -->
+
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    <script src="js/mainScript.js"></script>
+    <script src="js/jquery.scrollify.js"></script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+</body>
+{% endblock %}
+</html>

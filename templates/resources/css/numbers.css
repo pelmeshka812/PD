@@ -1,0 +1,15 @@
+A:link	 	{ color: #003399; text-decoration: underline	}
+A:visited	{ color:#003399;	text-decoration: underline	}
+A:hover		{ color:#003399; text-decoration: none      }
+.copy	 {  font: 8pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333}
+.copy1	 {  font: bold 10pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+.copy2	 {  font: 9pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+h1{
+   text-align: center;
+}
+#i table img{
+    height: 50px!important;
+}
+table {
+    margin: auto;
+}
