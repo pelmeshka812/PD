@@ -1,7 +1,7 @@
 from time import timezone
 
 from django.shortcuts import render, redirect
-from django.views.generic import FormView
+from django.views.generic import FormView, CreateView
 
 from main.forms import PartyForm, ProductForm
 from main.models import Party
@@ -29,11 +29,17 @@ def product_new(request):
     return render(request, 'product.html', {'form': form})
 
 
-class CreateParty(FormView):
+class CreateParty(CreateView):
     form_class = PartyForm
-    template_name = 'index.html'
-    success_url = '/home/'
+    template_name = 'index1.html'
+    success_url = '/main/home/'
 
     """def form_valid(self, form):
         Party.objects.create(**form.cleaned_data)
         return redirect(self.get_success_url())"""
+
+
+class CreateProduct(CreateView):
+    form_class = ProductForm
+    template_name = 'product.html'
+    success_url = '/main/home'
