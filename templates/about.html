@@ -1,0 +1,60 @@
+{% extends 'base.html' %} &nbsp;{% block content %}
+    {% load static %}
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="test/index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Pay</span> <span class="text-primary h4">Day</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'home'%}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">История мероприятий</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="login.html"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <div class="row">
+        <div class="text-center">
+            <div id="section5">
+
+                <h4 style="text-align: center; margin-top: 5vh; width: 60%; padding: 3px; margin-left: 20%;">
+                    <h4>Party. Дата: 2021-05-27</h4>
+                </h4>
+                <p class="regular-400">Участники</p>
+                <p class="light-300">Регина Акрамова regina@mail.ru</p>
+                <p class="light-300">Алина Ибрагимова akina@mail.ru</p>
+                <p class="regular-400">Список</p>
+                <p class="light-300">яйца Алина Ибрагимова 80р 1шт</p>
+                <p class="light-300">масло Регина Акрамова 100р 1шт</p>
+                <table border="1" class="regular-400 table" style="width: 60%; color: black; margin-left: 20%; text-align: center; background-color: rgba(86, 90, 205, 0.46); border-color: rgb(98, 102, 234);"><tbody><tr><td style="width: 50%;">Регина Акрамова должен(на) заплатить:</td><td><p>Алина Ибрагимова 40.00</p><p>Регина Акрамова 50.00</p></td></tr><tr><td style="width: 50%;">Алина Ибрагимова должен(на) заплатить:</td><td><p>Алина Ибрагимова 40.00</p><p>Регина Акрамова 50.00</p></td></tr></tbody></table></div>
+        </div>
+    </div>
+{% load static %}
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <!-- Templatemo -->
+    <script src="{% static 'assets/js/templatemo.js'%}"></script>
+    <!-- Custom -->
+    <script src="{% static 'assets/js/custom.js'%}"></script>
+{% endblock %}

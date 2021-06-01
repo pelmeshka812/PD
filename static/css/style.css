@@ -16,24 +16,24 @@ body {
 
 #section00{
     height: 100vh;
-    background-image: url(../images/background_00.jpg);
+    background-image: url(../../templates/images/background_00.jpg);
     background-size: 100%;
 }
 
 #section1 {
-    background-image: url(../images/background_1.jpg);
+    background-image: url(../../templates/images/background_1.jpg);
 }
 
 #section2 {
-    background-image: url(../images/background_2.jpg);
+    background-image: url(../../templates/images/background_2.jpg);
 }
 
 #section3 {
-    background-image: url(../images/background_3.jpg);
+    background-image: url(../../templates/images/background_3.jpg);
 }
 
 #section4 {
-    background-image: url(../images/background_4.jpg);
+    background-image: url(../../templates/images/background_4.jpg);
 }
 
 #ww{
@@ -41,7 +41,7 @@ body {
 }
 
 #section5 {
-    background-image: url(../images/background_5.jpg);
+    background-image: url(../../templates/images/background_5.jpg);
 }
 
 .btn-secondary {

@@ -1,7 +1,6 @@
-
-
-
-{% extends 'base.html' %} &nbsp;{% block content %}
+{% extends 'base.html' %} {% block content %}
+<body>
+    <!-- Header -->
     <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand h1" href="index.html">
@@ -16,10 +15,10 @@
                 <div class="flex-fill mx-xl-5 mb-2">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Главная</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'home'%}">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">История мероприятий</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'about'%}">История мероприятий</a>
                         </li>
 <!--                        <li class="nav-item">-->
 <!--                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Work</a>-->
@@ -47,19 +46,23 @@
                 <div class="text-center">
                     <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
                             data-toggle="modal" data-target="#exampleModal">Создать мероприятие</button>
+                    <div id='partyName'></div>
                 </div>
              </div>
             <div class="col-lg-3 text-center">
                 <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
                             data-toggle="modal" data-target="#exampleModalParty">Добавить участников</button>
+                <div id='userName'></div>
             </div>
             <div class="col-lg-3 text-center">
                 <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
                         data-toggle="modal" data-target="#exampleModalLong">Добавить предмет</button>
+                <div id='prodName'></div>
             </div>
             <div class="col-lg-3 text-center">
                 <button type="button" class="btn btn-secondary text-white btn-lg rounded-pill px-lg-4"
                         data-toggle="modal" data-target="#modalWhoWhat">Кто и что использовал</button>
+                <div id='whoWhat'></div>
             </div>
 
             <div class="text-center py-4">
@@ -86,7 +89,7 @@
                         <div class="form-group">
 
                             <label for="usr"></label>
-                            {{ form.as_p }}
+                            <input type="text" class="form-control form-control-lg light-300" placeholder="Название" id="usr">
 
                         </div>
                         <br/>
@@ -240,14 +243,14 @@
 <!--    </div>-->
     <!-- > modal -->
 
-
+{% load static %}
 
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static '/assets/js/bootstrap.bundle.min.js'%}"></script>
     <!-- Load jQuery require for isotope -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{% static '/assets/js/jquery.min.js'%}"></script>
     <!-- Isotope -->
-    <script src="assets/js/isotope.pkgd.js"></script>
+    <script src="{% static '/assets/js/isotope.pkgd.js'%}"></script>
     <!-- Page Script -->
     <script>
         $(window).load(function() {
@@ -269,13 +272,12 @@
             });
         });
     </script>
-    <script src="js/mainScript.js"></script>
-    <script src="js/jquery.scrollify.js"></script>
+    <script src="{% static '/js/mainScript.js'%}"></script>
+    <script src="{% static '/js/jquery.scrollify.js'%}"></script>
     <!-- Templatemo -->
-    <script src="assets/js/templatemo.js"></script>
+    <script src="{% static '/assets/js/templatemo.js'%}"></script>
     <!-- Custom -->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static '/assets/js/custom.js'%}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-
-{% endblock %}
+    {% endblock %}

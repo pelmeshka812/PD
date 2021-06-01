@@ -5,6 +5,9 @@ $(document).ready(function () {
     var usersNames = [];
     var eventName = "";
     var date = "";
+    let userCount = 0;
+    let count = 0;
+    let count2 = 0;
 
     var form2 = $('#form_creating_event');
     console.log(form2);
@@ -15,6 +18,7 @@ $(document).ready(function () {
         console.log(date);
         window.location.href = "#section2";
         console.log(eventName);
+        addParty();
     });
 
     var formAddingUser = $('#form_adding_user');
@@ -30,7 +34,8 @@ $(document).ready(function () {
         usersNames.push(fullname);
         users.push(user);
         console.log(usersNames.length + ' ' + users.length);
-
+        addUser(userCount);
+        userCount++;
         /*for (var i = 0; i < users.length; i++) {
             console.log(users[i].to_string())
         }*/
@@ -104,7 +109,8 @@ $(document).ready(function () {
         document.getElementById("section4_products").append(option);
 
         console.log(user.to_string() + " bought " + quantity + ' ' + name + " for " + price);
-
+        addProd(count);
+        count++;
         // cleaning form, works bad
 
         /*var frm2 = document.getElementsByName('adding_product')[0];
@@ -126,6 +132,9 @@ $(document).ready(function () {
         console.log(users[userNmb].to_string());
         console.log(products[productNmb].to_string());
         console.log("Success");
+        addWho(count2);
+        count2++;
+
     });
 
 
@@ -331,6 +340,31 @@ $(document).ready(function () {
         addTable();
     });
 
+    function addParty() {
+        let party = document.getElementById('partyName');
+        party.innerHTML +='<p>'+ eventName + ". Дата: " + date + "</p>";
+        party.className = "regular-400";
+
+    }
+
+    function addUser(i) {
+        let user2 = document.getElementById('userName');
+        user2.innerHTML += '<p>' + users[i].getName() + " " + users[i].getSurname() + "</p>";
+        user2.className = "regular-400";
+    }
+
+    function addProd(i) {
+         let productNew = document.getElementById('prodName');
+         productNew.innerHTML += '<p>' + products[i].getName() + ' ' + products[i].getPrice() + "p " + products[i].getUser().getName() + "</p>";
+         productNew.className = "regular-400";
+    }
+    
+    function addWho(i) {
+        let newWho = document.getElementById('whoWhat');
+        newWho.innerHTML += '<p>' + members[i].getUser().getName() + " " + members[i].getPoduct().getName()  + "</p>";
+        newWho.className = "regular-400";
+    }
+
     function addTable() {
         var section5 = document.getElementById('section5');
         var table = document.createElement('table');
@@ -356,7 +390,7 @@ $(document).ready(function () {
             var cell = row.insertCell(0);
             cell.innerHTML = users[i].getName() + " " + users[i].getSurname() + " должен(на) заплатить:";
             var cell1 = row.insertCell(1);
-            var data = ""
+            var data = "";
             for (var j = 0; j < list.length; j++) {
                 data += '<p>' + list[j].getUser().getName() + " " + list[j].getUser().getSurname() + " " + list[j].getAmount()+ '</p>';
             }

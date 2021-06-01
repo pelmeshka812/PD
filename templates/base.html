@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+{% load widget_tweaks %}
 <head>
     <title>Pay Day</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="static/assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="static/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="{% static  '/assets/img/apple-icon.png'%}">
+    <link rel="shortcut icon" type="image/x-icon" href=" {% static '/assets/img/favicon.ico'%}">
     <!-- Load Require CSS -->
-    <link href="static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static '/assets/css/bootstrap.min.css'%}" rel="stylesheet">
     <!-- Font CSS -->
-    <link href="static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="{% static '/assets/css/boxicon.min.css'%}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="static/assets/css/templatemo.css">
+    <link rel="stylesheet" href="{% static '/assets/css/templatemo.css'%}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="static/assets/css/custom.css">
+    <link rel="stylesheet" href="{% static '/assets/css/custom.css'%}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
